@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Landing Page Design</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Font Awesome cdn -->
+    <script src="https://kit.fontawesome.com/bc946b8cc8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <!-- Navbar Start -->
+        <nav>
+            <div class="navbar">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#"><img src="images/logo1.png" alt="logo"></a>
+                </div>
+
+                <!-- Menu -->
+                <ul class="links">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+                <ul class="links">
+                    <li><a class="action_btn" href="#">Log In</a></li>
+                    <li><a class="action_btn" href="#">Sign Up</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="dropdown_menu">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+        <!-- Hero Start -->
+        <div class="hero">
+            <div class="text">
+                <p>
+                    Start Saving Money
+                </p>
+                <h1>
+                    Smart Credit Card For Your Daily Life.
+                </h1>
+                <button>
+                    <span>Download</span>
+                    <i class="fa-regular fa-circle-down"></i>
+                </button>
+            </div>
+            <div class="image">
+                <div class="mobile">
+                    <img src="images/mobile-card.png" alt="mobile-card">
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+    </header>
+
+    <!-- JavaScript for Toggle -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen?'fa-solid fa-xmark':'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
